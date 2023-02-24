@@ -66,4 +66,26 @@ searchInput.addEventListener("input", function (e) {
   });
 });
 
+searchInput.addEventListener("input", function (e) {
+  const pokemonNames = document.querySelectorAll(".pokemon-id");
+  const search = searchInput.value.toLowerCase();
+  pokemonNames.forEach((pokemonName) => {
+    pokemonName.parentElement.style.display = "block";
+    if (!pokemonName.innerHTML.toLowerCase().includes(search)) {
+      pokemonName.parentElement.style.display = "none";
+    }
+  });
+});
+
+searchInput.addEventListener("input", function (e) {
+  const pokemonNames = document.querySelectorAll(".pokemon-type");
+  const search = searchInput.value.toLowerCase();
+  pokemonNames.forEach((pokemonName) => {
+    pokemonName.parentElement.style.display = "block";
+    if (!pokemonName.innerHTML.toLowerCase().includes(search)) {
+      pokemonName.parentElement.style.display = "none";
+    }
+  });
+});
+
 initPokemon();
