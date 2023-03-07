@@ -67,3 +67,5 @@ searchInput.addEventListener("input", function (e) {
 });
 
 initPokemon();
+
+//:)
