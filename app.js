@@ -57,32 +57,10 @@ const createPokemonBox = (pokemon) => {
 
 searchInput.addEventListener("input", function (e) {
   const pokemonNames = document.querySelectorAll(".pokemon-name");
-  const search = searchInput.value.toLowerCase();
+  const name = searchInput.value.toLowerCase();
   pokemonNames.forEach((pokemonName) => {
     pokemonName.parentElement.style.display = "block";
-    if (!pokemonName.innerHTML.toLowerCase().includes(search)) {
-      pokemonName.parentElement.style.display = "none";
-    }
-  });
-});
-
-searchInput.addEventListener("input", function (e) {
-  const pokemonNames = document.querySelectorAll(".pokemon-id");
-  const search = searchInput.value.toLowerCase();
-  pokemonNames.forEach((pokemonName) => {
-    pokemonName.parentElement.style.display = "block";
-    if (!pokemonName.innerHTML.toLowerCase().includes(search)) {
-      pokemonName.parentElement.style.display = "none";
-    }
-  });
-});
-
-searchInput.addEventListener("input", function (e) {
-  const pokemonNames = document.querySelectorAll(".pokemon-type");
-  const search = searchInput.value.toLowerCase();
-  pokemonNames.forEach((pokemonName) => {
-    pokemonName.parentElement.style.display = "block";
-    if (!pokemonName.innerHTML.toLowerCase().includes(search)) {
+    if (!pokemonName.innerHTML.toLowerCase().includes(name)) {
       pokemonName.parentElement.style.display = "none";
     }
   });
